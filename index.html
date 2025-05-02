@@ -1,66 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Full-Stack Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Aishwarya - Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { scroll-behavior: smooth; }
+        .section { min-height: 100vh; padding: 4rem 2rem; }
+        .navbar { transition: all 0.3s ease; }
+        .navbar.scrolled { background-color: rgba(17, 24, 39, 0.9); }
+        .skill-bar { height: 10px; background-color: #e5e7eb; border-radius: 5px; overflow: hidden; }
+        .skill-progress { height: 100%; transition: width 1s ease-in-out; }
+    </style>
 </head>
-
-<body>
-    <header>
-        <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav class="navbar fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold">Aishwarya</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition">About</a>
+                    <a href="#education" class="hover:text-blue-400 transition">Education</a>
+                    <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                    <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi, I'm [Your Name], a passionate Full-Stack Developer with expertise in building responsive web
-                applications. I specialize in both frontend and backend technologies such as React, Java, Spring Boot,
-                and more!</p>
+    <!-- Home Section -->
+    <section id="home" class="section flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-4">Hi, I'm Aishwarya</h1>
+            <p class="text-xl mb-6">Full Stack Developer | Crafting Scalable Digital Solutions</p>
+            <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition">Get In Touch</a>
+            <a href="resume.pdf" download class="ml-4 bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition">Download Resume</a>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1: Web Application</h3>
-                <p>Description of your project here.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2: E-Commerce Platform</h3>
-                <p>Description of your project here.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3: Travel App</h3>
-                <p>Description of your project here.</p>
+    <!-- About Section -->
+    <section id="about" class="section bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="https://via.placeholder.com/300" alt="Profile" class="w-64 h-64 rounded-full mb-6 md:mb-0 md:mr-8">
+                <div>
+                    <p class="text-lg mb-4">I'm a dedicated full stack developer with over 7 years of experience designing and deploying enterprise-grade applications in domains like Travel, E-Commerce, and Technology. Proficient in Java, JavaScript, React, and Spring Boot, I excel in building scalable, secure, and high-performance solutions.</p>
+                    <p class="text-lg">With a strong foundation in Agile methodologies and modern development practices, I collaborate effectively with cross-functional teams to deliver innovative solutions. My passion for continuous learning drives me toward technical leadership roles.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+    <!-- Education Section -->
+    <section id="education" class="section bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Education</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Bachelor of Technology in Information Technology</h3>
+                    <p class="text-lg">SSJ Institute Of Technology, Hyderabad | 05/2010</p>
+                    <p class="text-lg">Focused on software engineering, data structures, and web technologies.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Front-End -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Front-End</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">React</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2">JavaScript</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-2">Tailwind CSS</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Back-End -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Back-End</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">Java</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2">Spring Boot</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-2">MySQL</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Tools</h3>
+                    <div class="mb-4">
+                        <p class="mb-2">Git</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2">Postman</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-2">AWS</p>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Experience</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Full Stack Web Developer</h3>
+                    <p class="text-lg">09/2021 - 05/2023</p>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>Designed and developed a scalable full-stack application with React, Spring Boot, and MySQL, enabling efficient management of customer data and transactions.</li>
+                        <li>Integrated RESTful APIs for real-time data rendering, optimizing front-end performance with React best practices to reduce page load times.</li>
+                        <li>Built Spring Boot microservices using Java 8 features (Lambda, Streams), configuring Hibernate and JPA for streamlined MySQL interactions.</li>
+                        <li>Implemented secure authentication with Spring Security, using OAuth2.0 and JWT for protected API access and role-based authorization.</li>
+                        <li>Optimized MySQL schemas with indexes and stored procedures, enhancing query performance for client workloads.</li>
+                        <li>Used Git and GitHub for version control, implementing branching strategies for collaborative development.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Junior Developer</h3>
+                    <p class="text-lg">HakriSoft, Hyderabad | 03/2014 - 09/2015</p>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>Developed front-end pages for an Insurance Product Application using HTML and CSS, creating user-friendly interfaces for data interaction.</li>
+                        <li>Wrote SQL queries to efficiently retrieve and update insurance data, improving data management processes.</li>
+                        <li>Debugged and resolved production issues, ensuring application stability and performance.</li>
+                        <li>Collaborated in team meetings to discuss project updates, contributing to timely project completion.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Junior Developer</h3>
+                    <p class="text-lg">RMSI, Hyderabad | 03/2011 - 09/2011</p>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>Contributed to an HR exit interview application, assisting in front-end and back-end development using .NET.</li>
+                        <li>Gained experience in software architecture and collaborated with a team to enhance development practices.</li>
+                        <li>Participated in training sessions focused on best practices in software development.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+            <p class="text-lg mb-6">Interested in collaborating or discussing opportunities? Let's connect!</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:aishdande9@gmail.com" class="text-2xl hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com" class="text-2xl hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" class="text-2xl hover:text-blue-400"><i class="fab fa-github"></i></a>
+            </div>
+            <div onclick="handleContactClick()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition cursor-pointer">Send Message</div>
+        </div>
+    </section>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact button handler
+        function handleContactClick() {
+            alert('Contact form functionality can be added here!');
+        }
+    </script>
 </body>
-
 </html>
